@@ -1,7 +1,6 @@
 package com.MedicalAttention.medicalAttention.controller;
 
 import com.MedicalAttention.medicalAttention.entity.Patients;
-import com.MedicalAttention.medicalAttention.repository.patientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +10,7 @@ import java.util.List;
 @RequestMapping("apiPatients")
 public class patientsController {
     @Autowired
-    private patientRepository patientRepository;
+    private com.MedicalAttention.medicalAttention.repository.PatientRepository patientRepository;
 
     @GetMapping("/patients")
     List<Patients> getPatients() {
